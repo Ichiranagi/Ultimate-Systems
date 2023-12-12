@@ -6,11 +6,14 @@
 #include <stdlib.h>
 #include <random>
 #include <cctype>
-
+#include <windows.h>
 
 using namespace std;
 
 char click;
+void cambiarColorFuente(int color) {
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
 
 class Login{
     private:
@@ -66,9 +69,6 @@ class Login{
             fputs(Separador, fp);
             fputs(Password, fp);
             fputs("\n",fp);
-
-            
-
             fclose(fp);
 
         }
@@ -180,7 +180,7 @@ class tickets
 
         string NombrePlanVuelo;
         string asientosAlmacenados;
-        char *asientosAlmacenadosRES = asientosAlmacenados.data();
+        char *asientosAlmacenadosRE = asientosAlmacenados.data();
         unsigned int CodigoTickets;
         
         // Método para generar el código aleatorio
@@ -1866,6 +1866,8 @@ class tickets
 
 int main()
 {
+         // Cambiar el color de la consola (puedes personalizar estos valores según tu preferencia)
+    system("color 9F");
     tickets ti;
     Login lo;
     int opcion1;
@@ -1875,19 +1877,50 @@ int main()
     char fila_char;
     int columna;
     ti.inicializarAsientos();
-    
-
 
             do
             {
-                system("cls");
-                cout<<"\nBIENVENIDO a STARCOMPANY AEROLINE";
-                cout << "\n\n1- Iniciar sesion";
-                cout << "\n\n2- Registrarse";
-                cout << "\n\n3- salir";
-                cout << "\n\nOpcion: ";
-                cin >> opcion1;
+   // Cambiar el color de la consola (puedes personalizar estos valores según tu preferencia)
+    system("color 9F");
+    system("cls");
+    
+    
+    cout << "                                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    cout << "                                   ++++++++++++++++++===================++++++++++++++++++\n";
+    cout << "                                   +++++++++++++======================-:-+=+++++++++++++++\n";
+    cout << "                                   ++++++++++=======================:.:=======++++++++++++\n";
+    cout << "                                   ++++++========================-:.:===========++++++++++\n";
+    cout << "                                   ==========+:....:--====::-=-:..:==============+++++++++\n";
+    cout << "                                   ===========+=-=-:.............-============++==++++++++\n";
+    cout << "                                   ============++***+++=-::......::--=======*#%#+==+++++++\n";
+    cout << "                                   ===================++--===---::......:=*%%##=:-=+++++++\n";
+    cout << "                                   =================-:-=....:=+++*++==-::::-+**-===+++++++\n";
+    cout << "                                   ===================-+...:========++++**+-:-+++==+++++++\n";
+    cout << "                                   ===================+=..:================-.=======++++++\n";
+    cout << "                                   =====================..==========================++++++\n";
+    cout << "                                   =====================:-============================++++\n";
+    cout << "                                   ===================================================++++\n";
 
+                   cout << "             ##                         ##                                   " << endl;
+    cout << "             ##                         ##                                   " << endl;
+    cout << "   #####    #####    ####    ######    #####             ####     ####    ##  ##   ######    ####    #####    ##  ## " << endl;
+    cout << "  ##         ##         ##    ##  ##    ##              ##  ##   ##  ##   #######   ##  ##      ##   ##  ##   ##  ## " << endl;
+    cout << "   #####     ##      #####    ##        ##              ##       ##  ##   ## # ##   ##  ##   #####   ##  ##   ##  ## " << endl;
+    cout << "       ##    ## ##  ##  ##    ##        ## ##           ##  ##   ##  ##   ##   ##   #####   ##  ##   ##  ##    ##### " << endl;
+    cout << "  ######      ###    #####   ####        ###             ####     ####    ##   ##   ##       #####   ##  ##       ## " << endl;
+    cout << "                                                                                   ####                       #####  \n" << endl;
+
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++"                           << endl;
+    cout << "                                  +                   Menu Principal                    +"                           << endl;
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++"                           << endl;
+    cout << "                                  +                                                     +"                           << endl;
+    cout << "                                  +                1. Iniciar sesion                    +"                           << endl;
+    cout << "                                  +                 2. Registrarse                      +"                           << endl;
+    cout << "                                  +                    3. Salir                         +"                           << endl;
+    cout << "                                  +                                                     +"                           << endl;
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"                           << endl;
+    cout << "                                                  Ingrese su eleccion: "                                               << endl;
+                cin >> opcion1;
                 switch (opcion1)
                 {
 
@@ -1895,12 +1928,46 @@ int main()
 
                         do
                         {
-                            system("cls");
-                            cout<<"\nBIENVENIDO a STARCOMPANY AEROLINE";
-                            cout << "\n\n1- Usuario";
-                            cout << "\n\n2- Admin";
-                            cout << "\n\n3- salir";
-                            cout << "\n\nOpcion: ";
+    system("color 9F");
+    system("cls");
+    
+    
+    cout << "                                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    cout << "                                   ++++++++++++++++++===================++++++++++++++++++\n";
+    cout << "                                   +++++++++++++======================-:-+=+++++++++++++++\n";
+    cout << "                                   ++++++++++=======================:.:=======++++++++++++\n";
+    cout << "                                   ++++++========================-:.:===========++++++++++\n";
+    cout << "                                   ==========+:....:--====::-=-:..:==============+++++++++\n";
+    cout << "                                   ===========+=-=-:.............-============++==++++++++\n";
+    cout << "                                   ============++***+++=-::......::--=======*#%#+==+++++++\n";
+    cout << "                                   ===================++--===---::......:=*%%##=:-=+++++++\n";
+    cout << "                                   =================-:-=....:=+++*++==-::::-+**-===+++++++\n";
+    cout << "                                   ===================-+...:========++++**+-:-+++==+++++++\n";
+    cout << "                                   ===================+=..:================-.=======++++++\n";
+    cout << "                                   =====================..==========================++++++\n";
+    cout << "                                   =====================:-============================++++\n";
+    cout << "                                   ===================================================++++\n";
+
+                   cout << "             ##                         ##                                   " << endl;
+    cout << "             ##                         ##                                   " << endl;
+    cout << "   #####    #####    ####    ######    #####             ####     ####    ##  ##   ######    ####    #####    ##  ## " << endl;
+    cout << "  ##         ##         ##    ##  ##    ##              ##  ##   ##  ##   #######   ##  ##      ##   ##  ##   ##  ## " << endl;
+    cout << "   #####     ##      #####    ##        ##              ##       ##  ##   ## # ##   ##  ##   #####   ##  ##   ##  ## " << endl;
+    cout << "       ##    ## ##  ##  ##    ##        ## ##           ##  ##   ##  ##   ##   ##   #####   ##  ##   ##  ##    ##### " << endl;
+    cout << "  ######      ###    #####   ####        ###             ####     ####    ##   ##   ##       #####   ##  ##       ## " << endl;
+    cout << "                                                                                   ####                       #####  \n" << endl;
+
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++"                           << endl;
+    cout << "                                  +          Bienvenido a Star Company Airlines         +"                           << endl;
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++"                           << endl;
+    cout << "                                  +                                                     +"                           << endl;
+    cout << "                                  +                    1.Usuario                        +"                           << endl;
+    cout << "                                  +                    2. Admin                         +"                           << endl;
+    cout << "                                  +                    3. Salir                         +"                           << endl;
+    cout << "                                  +                                                     +"                           << endl;
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"                           << endl;
+    cout << "                                                  Ingrese su eleccion: "                                               << endl;
+                            
                             cin >> opcionRol;
                         
                             switch (opcionRol)
@@ -1919,12 +1986,28 @@ int main()
                             
                                     do
                                     {
-                                        system("cls");
-                                        cout<<"\nBIENVENIDO a STARCOMPANY AEROLINE "<< lo.USERNAME << lo.IDUSER;
-                                        cout << "\n\n1- Comprar vuelo";
-                                        cout << "\n\n2- Cargar ticket Vuelo";
-                                        cout << "\n\n3- salir";
-                                        cout << "\n\nOpcion: ";
+                                    system("color 9F");
+                                    system("cls");
+
+                   cout << "             ##                         ##                                   " << endl;
+    cout << "             ##                         ##                                   " << endl;
+    cout << "   #####    #####    ####    ######    #####             ####     ####    ##  ##   ######    ####    #####    ##  ## " << endl;
+    cout << "  ##         ##         ##    ##  ##    ##              ##  ##   ##  ##   #######   ##  ##      ##   ##  ##   ##  ## " << endl;
+    cout << "   #####     ##      #####    ##        ##              ##       ##  ##   ## # ##   ##  ##   #####   ##  ##   ##  ## " << endl;
+    cout << "       ##    ## ##  ##  ##    ##        ## ##           ##  ##   ##  ##   ##   ##   #####   ##  ##   ##  ##    ##### " << endl;
+    cout << "  ######      ###    #####   ####        ###             ####     ####    ##   ##   ##       #####   ##  ##       ## " << endl;
+    cout << "                                                                                   ####                       #####  \n" << endl;
+
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++"                           << lo.USERNAME << lo.IDUSER;
+    cout << "                                  +          Bienvenido a Star Company Airlines         +"                           << endl;
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++"                           << endl;
+    cout << "                                  +                                                     +"                           << endl;
+    cout << "                                  +                   1.Comprar Vuelo                   +"                           << endl;
+    cout << "                                  +              2. Cargar Ticket de Vuelo              +"                           << endl;
+    cout << "                                  +                      3. Salir                       +"                           << endl;
+    cout << "                                  +                                                     +"                           << endl;
+    cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"                           << endl;
+    cout << "                                                  Ingrese su eleccion: "                                               << endl;
                                         cin >> opcion2;
 
                                         switch (opcion2)
@@ -2081,31 +2164,55 @@ int main()
                                     
                                     do
                                     {
+                                         system("color 9F");
                                          system("cls");
-                                        cout<<"\nBIENVENIDO a STARCOMPANY AEROLINE - ADMIN";
-                                        cout << "\n\n1- Fecha de Salida";
-                                        cout << "\n\n2- Fecha de retorno";
-                                        cout << "\n\n3- Origen de los vuelos";
-                                        cout << "\n\n4- Destinacion de los vuelos";
-                                        cout << "\n\n5- Planes de vuelos";
-                                        cout << "\n\n6- Asiento Plan basico";
-                                        cout << "\n\n7- Asiento Plan Intermedio";
-                                        cout << "\n\n8- Asiento Plan Premiun";
-                                        cout << "\n\n9- Salir";
-                                        cout << "\n\nOpcion: ";
+
+                                                            cout << "             ##                         ##                                   " << endl;
+    cout << "             ##                         ##                                   " << endl;
+    cout << "   #####    #####    ####    ######    #####             ####     ####    ##  ##   ######    ####    #####    ##  ## " << endl;
+    cout << "  ##         ##         ##    ##  ##    ##              ##  ##   ##  ##   #######   ##  ##      ##   ##  ##   ##  ## " << endl;
+    cout << "   #####     ##      #####    ##        ##              ##       ##  ##   ## # ##   ##  ##   #####   ##  ##   ##  ## " << endl;
+    cout << "       ##    ## ##  ##  ##    ##        ## ##           ##  ##   ##  ##   ##   ##   #####   ##  ##   ##  ##    ##### " << endl;
+    cout << "  ######      ###    #####   ####        ###             ####     ####    ##   ##   ##       #####   ##  ##       ## " << endl;
+    cout << "                                                                                   ####                       #####  \n" << endl;
+
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +     Bienvenido a Star Company Airlines - ADMIN      +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +                  1. Fecha de Salida                 +" << endl;
+cout << "                                  +                  2. Fecha de retorno                +" << endl;
+cout << "                                  +                  3. Origen de los vuelos            +" << endl;
+cout << "                                  +                  4. Destinacion de los vuelos       +" << endl;
+cout << "                                  +                  5. Planes de vuelos                +" << endl;
+cout << "                                  +                  6. Asiento Plan basico             +" << endl;
+cout << "                                  +                  7. Asiento Plan Intermedio         +" << endl;
+cout << "                                  +                  8. Asiento Plan Premiun            +" << endl;
+cout << "                                  +                  9. Salir                           +" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su eleccion: " << endl;
+  
                                         cin >> opcion2;
 
                                         switch (opcion2)
                                         {
                                         case 1:
+                                                system("color 9F");
                                                  system("cls");
                                                 int opc1;
-                                                cout << "\n\n1- Agregar";
-                                                cout << "\n\n2- Cargar";
-                                                cout << "\n\n3- Modificar";
-                                                cout << "\n\n4- Eliminar";
-                                                cout << "\n\n5- Salir";
-                                                cout << "\n\nOpcion: ";
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +              Bienvenido a su Terminal               +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +                  1. Agregar                         +" << endl;
+cout << "                                  +                  2. Cargar                          +" << endl;
+cout << "                                  +                  3. Modificar                       +" << endl;
+cout << "                                  +                  4. Eliminar                        +" << endl;
+cout << "                                  +                  5. Salir                           +" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su elección: " << endl;
                                                 cin >> opc1;
 
                                                 switch (opc1)
@@ -2157,15 +2264,21 @@ int main()
                                             break;
 
                                         case 2:
-
+                                                System("color 9F");
                                                 system("cls");
                                                 int opc2;
-                                                cout << "\n\n1- Agregar";
-                                                cout << "\n\n2- Cargar";
-                                                cout << "\n\n3- Modificar";
-                                                cout << "\n\n4- Eliminar";
-                                                cout << "\n\n5- Salir";
-                                                cout << "\n\nOpcion: ";
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +              Bienvenido a su Terminal               +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +                  1. Agregar                         +" << endl;
+cout << "                                  +                  2. Cargar                          +" << endl;
+cout << "                                  +                  3. Modificar                       +" << endl;
+cout << "                                  +                  4. Eliminar                        +" << endl;
+cout << "                                  +                  5. Salir                           +" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su elección: " << endl;
                                                 cin >> opc2;
 
                                                 switch (opc2)
@@ -2216,14 +2329,21 @@ int main()
                                             break;
 
                                         case 3:
+                                                 system("Color 9F");
                                                  system("cls");
                                                 int opc3;
-                                                cout << "\n\n1- Agregar";
-                                                cout << "\n\n2- Cargar";
-                                                cout << "\n\n3- Modificar";
-                                                cout << "\n\n4- Eliminar";
-                                                cout << "\n\n5- Salir";
-                                                cout << "\n\nOpcion: ";
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +              Bienvenido a su Terminal               +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +                  1. Agregar                         +" << endl;
+cout << "                                  +                  2. Cargar                          +" << endl;
+cout << "                                  +                  3. Modificar                       +" << endl;
+cout << "                                  +                  4. Eliminar                        +" << endl;
+cout << "                                  +                  5. Salir                           +" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su elección: " << endl;
                                                 cin >> opc3;
 
                                                 switch (opc3)
@@ -2272,15 +2392,21 @@ int main()
                                             break;
 
                                         case 4:
-
-                                                 system("cls");
+                                                Sytem("color 9F");
+                                                system("cls");
                                                 int opc4;
-                                                cout << "\n\n1- Agregar";
-                                                cout << "\n\n2- Cargar";
-                                                cout << "\n\n3- Modificar";
-                                                cout << "\n\n4- Eliminar";
-                                                cout << "\n\n5- Salir";
-                                                cout << "\n\nOpcion: ";
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +              Bienvenido a su Terminal               +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +                  1. Agregar                         +" << endl;
+cout << "                                  +                  2. Cargar                          +" << endl;
+cout << "                                  +                  3. Modificar                       +" << endl;
+cout << "                                  +                  4. Eliminar                        +" << endl;
+cout << "                                  +                  5. Salir                           +" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su elección: " << endl;
                                                 cin >> opc4;
 
                                                 switch (opc4)
@@ -2329,14 +2455,21 @@ int main()
                                             break;
 
                                         case 5:
+                                                 system("color 9F");
                                                  system("cls");
                                                 int opc5;
-                                                cout << "\n\n1- Agregar";
-                                                cout << "\n\n2- Cargar";
-                                                cout << "\n\n3- Modificar";
-                                                cout << "\n\n4- Eliminar";
-                                                cout << "\n\n5- Salir";
-                                                cout << "\n\nOpcion: ";
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +              Bienvenido a su Terminal               +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +                  1. Agregar                         +" << endl;
+cout << "                                  +                  2. Cargar                          +" << endl;
+cout << "                                  +                  3. Modificar                       +" << endl;
+cout << "                                  +                  4. Eliminar                        +" << endl;
+cout << "                                  +                  5. Salir                           +" << endl;
+cout << "                                  +                                                     +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su elección: " << endl;
                                                 cin >> opc5;
 
                                                 switch (opc5)
@@ -2383,13 +2516,20 @@ int main()
                                             break;
 
                                         case 6:
+                                                system("color 9F");
                                                 system("cls");
                                                 int opc6;
-                                                cout << "\n\n1- Asignar asiento B";
-                                                cout << "\n\n2- Reestablecer asiento en especifico B";
-                                                cout << "\n\n3- Reestablecer asientos B";
-                                                cout << "\n\n4- salir";
-                                                cout << "\n\nOpcion: ";
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                Asignación de Asientos Basico          +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                       +" << endl;
+cout << "                                  +               1. Asignar asiento                      +" << endl;
+cout << "                                  +               2. Reestablecer asiento en especifico   +" << endl;
+cout << "                                  +               3. Reestablecer asientos                +" << endl;
+cout << "                                  +               4. Salir                                +" << endl;
+cout << "                                  +                                                       +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su elección: " << endl;
                                                 cin >> opc6;
 
                                                 
@@ -2450,14 +2590,20 @@ int main()
                                             break;
 
                                         case 7:
-
+                                                system("color 9F");
                                                 system("cls");
                                                 int opc7;
-                                                cout << "\n\n1- Asignar asiento I";
-                                                cout << "\n\n2- Reestablecer asiento en especifico I";
-                                                cout << "\n\n3- Reestablecer asientos I";
-                                                cout << "\n\n4- salir";
-                                                cout << "\n\nOpcion: ";
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +             Asignación de Asientos Intermedio         +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                       +" << endl;
+cout << "                                  +               1. Asignar asiento                      +" << endl;
+cout << "                                  +               2. Reestablecer asiento en especifico   +" << endl;
+cout << "                                  +               3. Reestablecer asientos                +" << endl;
+cout << "                                  +               4. Salir                                +" << endl;
+cout << "                                  +                                                       +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su elección: " << endl;
                                                 cin >> opc7;
 
                                                 
@@ -2521,14 +2667,20 @@ int main()
                                             break;
 
                                         case 8:
-
+                                                system("color 9F");
                                                 system("cls");
                                                 int opc8;
-                                                cout << "\n\n1- Asignar asiento P";
-                                                cout << "\n\n2- Reestablecer asiento en especifico P";
-                                                cout << "\n\n3- Reestablecer asientos P";
-                                                cout << "\n\n4- salir";
-                                                cout << "\n\nOpcion: ";
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +             Asignación de AsientosPremium             +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                  +                                                       +" << endl;
+cout << "                                  +               1. Asignar asiento                      +" << endl;
+cout << "                                  +               2. Reestablecer asiento en especifico   +" << endl;
+cout << "                                  +               3. Reestablecer asientos                +" << endl;
+cout << "                                  +               4. Salir                                +" << endl;
+cout << "                                  +                                                       +" << endl;
+cout << "                                  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+cout << "                                                  Ingrese su elección: " << endl;
                                                 cin >> opc8;
 
                                                 
